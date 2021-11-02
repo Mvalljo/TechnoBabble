@@ -1,0 +1,12 @@
+[
+  {
+    "comment_txt":"I just learned that in class!",
+    "user_id": 3,
+    "post_id": 1
+  },
+  {
+    "comment_txt": "That's really intersting.",
+    "user_id": 3,
+    "post_id": 2
+  }
+]
