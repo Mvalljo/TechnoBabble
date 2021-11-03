@@ -8,27 +8,54 @@
       rel='stylesheet'
       href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'
     />
-    <link rel='stylesheet' href='/public/css/style.css' />
+    <link rel='stylesheet' href='/css/style.css' />
   </head>
 
   <body>
-    <div class='flex-column justify-space-around'>
-      <header class='display-flex justify-space-between align-center p-2'>
-        <h1>
-          <a href='/'>Techno Babble</a>
-        </h1>
-        <nav>
-          <!-- Conditionally render login or logout links -->
-          {{#if logged_in}}
-            <button class='no-button' id='logout'>logout</button>
-          {{else}}
-            <a href='/'>Home</a>
-            |
-            <a href='/post'>Dashboard</a>
-            |
-            <a href='/login'>login</a>
-          {{/if}}
-        </nav>
+    <div class='flex-column'>
+      <header class='p-3 bg-dark text-white'>
+        <div class='containter'>
+          <div
+            class='d-flex flex-wrap align-items-center justify-content-between jutify-content-lg-start'
+          >
+            <ul
+              class='nav col-12 col-lg-auto mb-2 jutify-content-center mb-md-0'
+            >
+              <li class='nav-link px-2 text-secondary'>
+                <a href='/'>Home</a>
+              </li>
+              <li class='nav-link px-2 text-white'>
+                <a href='/post'>Dashboard</a>
+              </li>
+            </ul>
+            <h1>
+              <a
+                class='d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none'
+                href='/'
+              >
+                Techno Babble
+              </a>
+            </h1>
+            <div class='text-end'>
+              <!-- Conditionally render login or logout links -->
+              {{#if logged_in}}
+                <button
+                  type='button'
+                  class='btn btn-outline-light me-2'
+                  id='logout'
+                >logout</button>
+              {{else}}
+                <button type='button' class='btn btn-outline-light me-2'><a
+                    href='/login'
+                  >login</a></button>
+                <button type='button' class='btn btn-warning'><a
+                    href='/signUp'
+                  >Sign-up</a></button>
+              {{/if}}
+            </div>
+          </div>
+        </div>
+
       </header>
       <main class='container container-fluid mt-5'>
         <!-- Render the sub layout -->
