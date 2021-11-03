@@ -1,10 +1,10 @@
 body {
-  background-color: black;
+  background-color: #39719e;
   color: white;
 }
 header,
 .card-header {
-  background-color: rgb(51, 51, 51);
+  background-color: #343a40;
 }
 
 a {
@@ -13,6 +13,7 @@ a {
 
 .post {
   background-color: #39719e;
+  border: 5px solid #343a40;
 }
 
 .post a {
