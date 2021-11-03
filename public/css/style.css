@@ -11,7 +11,8 @@ a {
   color: white;
 }
 
-.post {
+.post,
+.signUp {
   background-color: #39719e;
   border: 5px solid #343a40;
 }
