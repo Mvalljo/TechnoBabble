@@ -59,14 +59,18 @@ router.get('/dashboard', withAuth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
-    
+
     res.render('dashboard', {
       ...user,
-      logged_in: true
+      logged_in: true,
     });
   } catch (err) {
     res.status(500).json(err);
   }
+});
+
+router.get('/dashboard/newpost', (req, res) => {
+  res.render('newPost');
 });
 
 router.get('/login', (req, res) => {
