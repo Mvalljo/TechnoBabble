@@ -1,0 +1,22 @@
+<section>
+  <div class="border-bottom">
+    <h2 class="d-inline">Your Dashboard</h2>
+    <h2 class="d-inline float-right">Welcome, {{name}}!</h2>
+  </div>
+  {{#if posts.length}}
+  <div class="list-group">
+    {{#each posts as |post|}}
+        <a class="list-item flex-row justify-space-between border mt-3" href="/post/{{post.id}}">
+        <span>{{post.title}}</span>
+        <span class="float-right">{{format_date post.date_created}}</span> 
+        </a>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
+<script src="./js/profile.js"></script>
+</section>
+<footer>
+  <button type='button' class='btn'><a href='/dashboard/newPost'>+ New Post</a></button>
+</footer>
