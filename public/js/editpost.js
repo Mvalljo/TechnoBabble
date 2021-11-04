@@ -4,18 +4,22 @@ const editFormHandler = async (event) => {
   const title = document.querySelector('#post-title').value.trim();
   const content = document.querySelector('#post-content').value.trim();
 
-  if (title && content) {
-    const response = await fetch('/api/posts', {
-      method: 'PUT',
-      body: JSON.stringify({post_id:id, title, content }),
-      headers: { 'Content-Type': 'application/json' },
-    });
+  const id = window.location.toString().split('/')[
+    window.location.toString().split('/').length - 1
+  ];
+  console.log(id)
+  console.log(title);
+  console.log(content);
+  const response = await fetch(`/api/posts/${id}`, {
+    method: 'PUT',
+    body: JSON.stringify({ title, content }),
+    headers: { 'Content-Type': 'application/json' },
+  });
 
-    if (response.ok) {
-      document.location.replace('/dashboard');
-    } else {
-      alert('Failed to edit post');
-    }
+  if (response.ok) {
+    document.location.replace('/dashboard');
+  } else {
+    alert('Failed to edit post');
   }
 };
 
