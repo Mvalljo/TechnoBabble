@@ -1,0 +1,32 @@
+<div class='card'>
+  <h3 class='card-header'>Edit Post</h3>
+  <form class='form card-body edit-post-form'>
+    <div>
+      <label for='post-title' class='form-label text-dark'>Title:</label>
+      <input
+        name='post-title'
+        type='text'
+        value='{{title}}'
+        class='form-input'
+        id='post-title'
+      />
+    </div>
+    <div>
+      <label class='form-label text-dark' for='content'>Content:</label>
+      <input
+        name='post-content'
+        type='text'
+        value='{{content}}'
+        class='form-input'
+        id='post-content'
+      />
+    </div>
+    <div>
+      <button type='submit' class='btn btn-success'>Update Post</button>
+      <button type='button' class='delete-post-btn btn btn-danger' data-id={{id}}>Delete Post</button>
+    </div>
+  </form>
+</div>
+
+<script src='/js/editpost.js'></script>
+<script src='/js/deletepost.js'></script>
