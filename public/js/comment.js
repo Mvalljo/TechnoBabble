@@ -1,4 +1,4 @@
-const commentFormHandler = async function (event) {
+const commentFormHandler = async (event) => {
   event.preventDefault();
 
   const postId = document.querySelector('input[name="post-id"]').value;
