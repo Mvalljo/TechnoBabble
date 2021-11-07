@@ -1,29 +1,29 @@
 const router = require('express').Router();
-const { Post, User } = require('../../models');
+const { Post, User, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
   try {
     const newPost = await Post.findAll({
-      attributes: ['id', 'title', 'content', 'created_at'],
-      order: [['created_at', 'DESC']],
+      attributes: ['id', 'title', 'content', 'date_created'],
+      order: [['date_created', 'DESC']],
       include: [
         {
           model: User,
-          attributes: ['username'],
+          attributes: ['name'],
         },
         {
           model: Comment,
           attributes: [
             'id',
-            'comment_text',
+            'comment_txt',
             'post_id',
             'user_id',
-            'created_at',
+            'date_created',
           ],
           include: {
             model: User,
-            attributes: ['username'],
+            attributes: ['name'],
           },
         },
       ],
@@ -54,24 +54,24 @@ router.get('/:id', withAuth, async (req, res) => {
       where: {
         id: req.params.id,
       },
-      attributes: ['id', 'content', 'title', 'created_at'],
+      attributes: ['id', 'content', 'title', 'date_created'],
       include: [
         {
           model: User,
-          attributes: ['username'],
+          attributes: ['name'],
         },
         {
           model: Comment,
           attributes: [
             'id',
-            'comment_text',
+            'comment_txt',
             'post_id',
             'user_id',
-            'created_at',
+            'date_created',
           ],
           include: {
             model: User,
-            attributes: ['username'],
+            attributes: ['name'],
           },
         },
       ],
