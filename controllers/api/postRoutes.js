@@ -20,11 +20,7 @@ router.get('/', withAuth, async (req, res) => {
             'post_id',
             'user_id',
             'date_created',
-          ],
-          include: {
-            model: User,
-            attributes: ['name'],
-          },
+          ]
         },
       ],
     });
