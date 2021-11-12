@@ -16,7 +16,7 @@ Note: User has to rename the .env.EXAMPLE file to .env and fill out their MySQL 
 ## Usage
 After invoking applicaiton user can go to the url which is http://localhost:3001/.
 
-Walkthrough of application = 
+Walkthrough of application = https://youtu.be/Wi0oLHt9oLQ
 
 URL = https://intense-depths-27704.herokuapp.com/
 ## License
