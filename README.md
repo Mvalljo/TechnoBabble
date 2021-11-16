@@ -2,6 +2,16 @@
 # TechnoBabble
 ## Description
 Build the CMS-style blog site that can publish articles, log posts, and user thoughts and opinions.
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
+- Express
+- Express-Handlebars
+- Express-Session
+- MySQL
+- bcrypt
+- Sequelize
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
