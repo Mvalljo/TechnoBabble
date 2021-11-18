@@ -29,6 +29,9 @@ After invoking applicaiton user can go to the url which is http://localhost:3001
 Walkthrough of application = https://youtu.be/Wi0oLHt9oLQ
 
 URL = https://intense-depths-27704.herokuapp.com/
+![image](https://user-images.githubusercontent.com/86633258/142308950-7ffa0db9-6b3e-4297-89e4-2203b70e6cd5.png)
+![image](https://user-images.githubusercontent.com/86633258/142309615-429f4614-7337-4f0f-954a-83544aa038db.png)
+![image](https://user-images.githubusercontent.com/86633258/142310037-d6588dda-b75b-4b08-aa5b-dc0dbb96ddf1.png)
 ## License
 This appplication is covered under the MIT License.
 ## Contribution
